@@ -1,0 +1,39 @@
+<html>
+    <script>
+
+        let map = new Map([
+            ['Tra Long','Dreamy Eyes'],
+            ['Ha Lang','Dreamy Eyes'],
+            ['Tra Long','U Ngan'],
+        ]);
+
+        console.log('Map ',map);
+
+        let obj = {
+            name : 'Tra Long',
+            age : 26,
+        };
+
+        let map2 = new Map(Object.entries(obj));
+        console.log('Map2 ',map2);
+
+        map.set('Tra Long','U Ngan');
+        console.log('map.get("Tra Long")',map.get('Tra Long'));
+        console.log('map.has ',map.has('Tra Long'));
+        console.log('map.size ',map.size);
+
+        for (let [key,value] of map) 
+        {
+            console.log('Key ',key,'Value ',value);
+        }
+
+        map.forEach((value,key) => console.log('For Each value ',value,'For Each key ',key));
+
+        console.log('Keys ',[...map.keys()]);
+
+        console.log('Values ',map.values());
+
+        console.log('Entries ',map.entries());
+
+    </script>
+</html>

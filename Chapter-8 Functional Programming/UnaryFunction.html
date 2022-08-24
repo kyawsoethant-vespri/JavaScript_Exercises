@@ -1,0 +1,21 @@
+<html>
+    <script>
+
+        console.log([1,2,3,4,5].map(x => x * x));
+
+        console.log(['1','2','3','4','5','10','100','1000'].map(parseInt));
+
+        const unary = (fn) => fn.length == 1?
+                       fn 
+                       : (arg) => fn(arg);
+
+        function accepTwo (x,y)
+        {
+            console.log('x is ',x ,'y is ',y);
+        }
+
+        let newFun = unary(accepTwo);
+        newFun(10,2);
+
+    </script>
+</html>

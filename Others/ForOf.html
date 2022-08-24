@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    
+    <script>
+
+        let arr = ['apple','orange','pineapple','mango','carrot']
+
+        for (let item of arr){
+
+            console.log('Item : ' , item);
+
+        }
+
+        let obj = {
+            'one' : 'apple',
+            'two' : 'orange'
+        }
+
+        for (let key of Object.keys(obj)) {
+            
+            console.log('Key' , key);
+        }
+
+        for (let value of Object.values(obj)) {
+            
+            console.log('Values' , value);
+
+        }
+
+        for (let [key,value] of Object.entries(obj)) {
+
+            console.log('Key',key , 'Value' , value);
+
+        }
+
+        // for of String
+
+        for (let ch of 'Hello') {
+            
+            console.log('Char ' , ch);
+
+        }
+
+        // for of Set
+
+        let set = new Set(['one','two','one','three']);
+
+        console.log('Set' , set);
+
+        for (let word of set) {
+            
+            console.log('Word ',word);
+        }
+
+        // for of Map
+
+        let map = new Map([ ['one',1], ['two',2], ['three',3] ]);
+
+        console.log('Map',map);
+
+        for (let [key , value] of map) {
+
+            console.log('Key ',key ,'Value' ,value);
+
+        }
+    </script>
+
+</body>
+</html>

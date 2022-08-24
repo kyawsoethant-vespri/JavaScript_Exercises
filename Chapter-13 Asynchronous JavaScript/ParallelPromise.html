@@ -1,0 +1,25 @@
+<html>
+    <script>
+
+        let url1 = 'https://jsonplaceholder.typicode.com/todos/1';
+        let url2 = 'https://22jsonplaceholder.typicode.com/todos/2';
+
+        let urls = [url1,url2];
+        let promises = urls.map(url => fetch(url).then(response => response.text()));
+
+        Promise.all(promises)
+               .then(data => console.log('Promise all data ',data));
+
+        Promise.allSettled(promises)
+               .then(data => console.log('Promise allSettled data ',data));
+        
+        Promise.any(promises)
+               .then(data => console.log('Promise any data ',data));
+
+        let promise2 = urls.map(url => fetch(url));
+               
+        Promise.race(promise2)
+                .then(data => console.log('Promise Race Data ',data));
+                       
+    </script>
+</html>

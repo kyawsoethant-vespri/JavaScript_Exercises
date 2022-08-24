@@ -1,0 +1,21 @@
+<html>
+    <script>
+
+        let pattern = /(John)(?=Wick)/i;
+        console.log('/(John)(?=Wick)/i JohnWick ',pattern.test('JohnWick'));
+        console.log('/(John)(?=Wick)/i JohnJames ',pattern.test('JohnJames'));
+
+        pattern = /(John)(?!Wick)/i;
+        console.log('/(John)(?!Wick)/i JohnWick ',pattern.test('JohnWick'));
+        console.log('/(John)(?!Wick)/i JohnJames ',pattern.test('JohnJames'));
+
+        console.log('JohnJames','JohnJames'.match(pattern));
+
+        pattern = /(?<=John)Wick/i;
+        console.log('/(?<= John)Wick/i JohnWick ',pattern.test('JohnWick'));
+        console.log('/(?<= John)Wick/i JameWick ',pattern.test('JameWick'));
+
+        console.log('JohnWick','JohnWick'.match(pattern));
+
+    </script>
+</html>

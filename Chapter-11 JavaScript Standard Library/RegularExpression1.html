@@ -1,0 +1,44 @@
+<html>
+    <script>
+
+        let pattern = /s$/i;
+
+        console.log('str Starts ',pattern.test('Starts'));
+        console.log('str Hello ',pattern.test('Hello'));
+        console.log('str StartS ',pattern.test('StartS'));
+
+        pattern = /^Java/i;
+
+        console.log('^Java ',pattern.test('Java'));
+        console.log('^JavaScript ',pattern.test('JavaScript'));      
+
+        pattern = /^Java.*/i;
+
+        console.log('^Java.* ',pattern.test('Java'));
+        console.log('^JavaScript.* ',pattern.test('JavaScript'));     
+        
+        pattern = /^Java.+/i;
+
+        console.log('^Java.+ ',pattern.test('Java'));
+        console.log('^JavaScript.+ ',pattern.test('JavaScript'));
+
+        pattern = /^Java.?/i;
+
+        console.log('^Java.? ',pattern.test('Java'));
+        console.log('^JavaScript.? ',pattern.test('JavaScript'));
+
+        pattern = /^Java.?$/i;
+
+        console.log('^Java.?$ ',pattern.test('Java'));
+        console.log('^JavaScript.?$ ',pattern.test('JavaScript'));
+
+        pattern = /^Javab{3}/i;
+        console.log('/^Javab{3}/i javabbb',pattern.test('Javabbb'));
+        console.log('/^Javab{3}/i javabb',pattern.test('Javabb'));
+
+        pattern = /^Javab{3,5}/i;
+        console.log('/^Javab{3,5}/i javabbb',pattern.test('Javabbb'));
+        console.log('/^Javab{3,5}/i javabbbb',pattern.test('Javabbbb'));
+
+    </script>
+</html>

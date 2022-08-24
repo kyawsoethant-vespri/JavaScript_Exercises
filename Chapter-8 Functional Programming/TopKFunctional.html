@@ -1,0 +1,35 @@
+<html>
+    <script>
+
+        let arr = [2,2,1,1,1,2,2,2,2,2,4];
+
+        let k = 2;
+
+        let countGroup = arr.reduce((group,b) => {
+            return group[b] ? (group[b]++ , group)
+                            : (group[b]=1 , group);
+        },[]);
+
+        console.log('Count Group ',countGroup);
+
+        let multi = countGroup.map((element,index) => [index,element]);
+        console.log('Multi ',multi);
+
+        let result = multi.filter(element => element != undefined)
+        console.log('Result ',result);
+
+        let sortResult = result.sort((a,b) => b[1] - a[1]);
+        console.log('Sort Result ',sortResult);
+
+        let singleResult = sortResult.map(arr => arr[0]);
+        console.log('Single Result ',singleResult);
+
+        let finalResult = singleResult.reduce((arr,b)=>{
+                            return arr.length == 2 ? arr : [...arr,b];
+        },[])
+
+        console.log('Final Result ',finalResult);
+
+
+    </script>
+</html>

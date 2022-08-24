@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spread Operator</title>
+</head>
+<body>
+    <script>
+
+        let obj1 = {
+            name : 'Tra Long',
+            age : 26,
+            movie : 'Dreamy Eyes 2019',
+            arr : [10 , 20]
+        };
+
+        let obj3 = {
+            Director : 'Victor Vu'
+        }
+
+        let obj2 = {
+            ...obj1,
+            ...obj3
+        };
+        
+        obj2.arr.push(30);
+        
+        console.log('obj1 : ', obj1);
+        console.log('obj2 : ', obj2);
+
+        console.log('obj1 == obj2', obj1 == obj2);
+
+    </script>
+</body>
+</html>

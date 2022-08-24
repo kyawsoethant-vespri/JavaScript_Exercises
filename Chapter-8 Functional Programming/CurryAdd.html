@@ -1,0 +1,37 @@
+<html>
+    <script>
+
+        // function curryAdd(x)
+        // {
+        //     return function(y)
+        //     {
+        //         return x+y;
+        //     }
+        // }
+
+        //  let add = curryAdd(3);
+        // console.log('Add + 4 : ',add(4));
+        // console.log('Add + 7 : ',add(7));
+
+
+        // const curry = (binaryFunction) => {
+        //     return function(firstArg){
+        //         return function(secondArg){
+
+        //             return binaryFunction(firstArg,secondArg);
+        //         };
+        //     };
+        // };
+
+        // let adding = curry(3);
+        // console.log('Adding : ',adding(3)(10));
+
+        const addFourNumbers = (a, b, c, d) => a + b + c + d;
+
+        const curriedAddFourNumbers = R.curry(addFourNumbers);
+        const f = curriedAddFourNumbers(5, 2);
+        const g = f(7);
+        g(4); 
+
+    </script>
+</html>

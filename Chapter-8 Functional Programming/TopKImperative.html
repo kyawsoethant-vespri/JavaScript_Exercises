@@ -1,0 +1,29 @@
+<html>
+    <script>
+        let arr = [2,2,1,1,1,2,2,2,2,2,4];
+        let countGroup = {};
+
+        for(let i of arr)
+        {
+
+            if(countGroup[i])
+            {
+                countGroup[i]++;
+            }
+
+            else
+            {
+                countGroup[i] = 1;
+            }
+        }
+
+        console.log('Count : ',countGroup);
+
+        let countArr = Object.entries(countGroup);
+        console.log('Count Arr : ',countArr);
+
+        countArr.sort((a,b) => b[1]-a[1]);
+        console.log('Count Arr : ',countArr);
+
+    </script>
+</html>

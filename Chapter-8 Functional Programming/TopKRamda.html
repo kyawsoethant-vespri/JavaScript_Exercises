@@ -1,0 +1,49 @@
+<html>
+    <script src="https://cdn.jsdelivr.net/npm/ramda@0.25.0/dist/ramda.min.js"></script>
+    <script>
+
+        let arr = [2,2,1,1,1,2,2,2,2,2,4];
+
+        // let groupBy = R.groupBy(R.identity);
+        // let group = groupBy(arr);
+        // console.log('Group ',group);
+
+        // let objArr = R.map(arr => [arr[0],arr.length])(group);
+        // let multiArr = R.values(objArr);
+        // console.log('Multi Array ',multiArr);
+
+        // let sortArr = R.sort((a,b) => b[1]-a[1])(multiArr);
+        // console.log('Sort Array ',sortArr);
+
+        // let singeResult = R.map(arr => arr[0])(sortArr);
+        // console.log('Single Array ',singeResult);
+
+        // let finalResult = R.take(2,singeResult);
+        // console.log('Final Result ',finalResult);
+
+        let log = R.tap(console.log);
+        let group = R.groupBy(R.identity);
+        let map = R.map(arr => [arr[0],arr.length]);
+        let values = R.values;
+        let sort = R.sort((a,b) => b[1]-a[1]);
+        let single = R.map(arr => arr[0]);
+        let topKTwo = R.take(2);
+
+        let topKFrequent = R.pipe(
+            group,log,
+
+            map,log,
+
+            values,log,
+
+            sort,log,
+
+            single,log,
+
+            topKTwo
+        );
+
+        console.log('Top K Result ',topKFrequent(arr));
+
+    </script>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+
+    <script>
+
+        function getTruthy(){
+
+            console.log('get True');
+            return true;
+
+        }
+
+        function getFalsy(){
+
+            console.log('get False');
+            return false;
+
+        }
+
+        // If LHS is falsy , return RHS value
+
+        console.log('getFalsy OR getTruthy' , getFalsy() || getTruthy());
+
+        console.log('getFalsy OR Object' , getFalsy() || {});
+
+        console.log('getFalsy OR "Hello,How are you?"' , getFalsy() || 'Hello , How are you?');
+
+        //if LHS is truthy , return LHS value
+
+        console.log('getTruthy OR getFalsy' , getTruthy() || getFalsy());
+
+       
+        // Logical OR Default
+
+        function hello(msg = "How are you?"){
+
+            console.log('hello' , msg);
+        
+        }
+
+        hello();
+
+        // Not operator
+
+        console.log('!!"hello"' , !!"hello");
+
+    </script>
+    
+</body>
+</html>

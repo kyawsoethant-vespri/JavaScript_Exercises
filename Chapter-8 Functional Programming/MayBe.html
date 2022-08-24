@@ -1,0 +1,32 @@
+<html>
+    <script>
+
+        let appendHi = (str) => str + ' Hi';
+        let toUpper = (str) => str.toUpperCase();
+
+        const MayBe = (v) => ({
+            value : v,
+            
+            map (f) {
+                return this.isNothing() ? MayBe.of(null) : MayBe.of(f(v))
+            },
+
+
+            valueOf : () => v,
+
+            isNothing : () => v === undefined || v == null,
+        });
+
+        MayBe.of = (v) => MayBe(v); //Lift Function or Unit
+
+        let emptyMayBe = MayBe.of(null);
+        console.log('IsNothing ',emptyMayBe.isNothing()); 
+
+        let nextMayBe = emptyMayBe.map(toUpper);
+        let appendMayBe = emptyMayBe.map(appendHi);
+
+        console.log('Next May Be ',nextMayBe.valueOf());
+        console.log('Append May Be ',appendMayBe.valueOf());
+
+    </script>
+</html>

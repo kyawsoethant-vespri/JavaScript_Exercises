@@ -1,0 +1,23 @@
+<html>
+    <script>
+
+        let Functor = (v) => ({
+            value : v,
+            map : (f) => Functor(f(v)),
+            valueOf : () => v
+        });
+
+        Functor.of = (v) => Functor(v); //Lift Function or Unit
+
+        let funX = Functor.of(2);
+        let double = (x) => x * x;
+        let inc = (x) => x + 1;
+
+        let newX = funX.map(inc);
+        let newDoubleX = funX.map(double);
+
+        console.log('newX ',newX.valueOf());
+        console.log('new DoubleX ',newDoubleX.valueOf());
+
+    </script>
+</html>

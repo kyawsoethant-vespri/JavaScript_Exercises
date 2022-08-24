@@ -1,0 +1,39 @@
+<html>
+    <script>
+
+        function prependHi(str)
+        {
+            return str + ' Tra Long';
+        }
+
+        function toUpper(str)
+        {
+            return str.toUpperCase();
+        }
+
+        console.log('Append : ',prependHi('Hello'));
+        console.log('Uppercase : ',toUpper(prependHi('Hello')));
+
+        function combine(str)
+        {
+            let a = prependHi(str);
+            let b = toUpper(a);
+
+            return b;
+        }
+
+        console.log('UpperCase : ',combine('Hi'));
+
+        function compose(funA,funB)
+        {
+            return function(str)
+            {
+                return funA(funB(str));
+            }
+        }
+
+        let newFun = compose(toUpper,prependHi);
+        console.log('UpperCase : ',newFun('Hello,How are you?'));
+
+    </script>
+</html>

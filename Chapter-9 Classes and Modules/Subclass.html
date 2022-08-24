@@ -1,0 +1,55 @@
+<html>
+    <script>
+
+        class Human
+        {
+            constructor(name , age)
+            {
+                this.name = name;
+                this.age = age;
+                this.data = [];
+
+                console.log('Human Constructor');
+            }
+
+            show()
+            {
+                console.log('Name ',this.name ,'Age ',this.age);
+            }
+        }
+
+        class Teacher extends Human
+        {
+            constructor(name , age , school)
+            {
+                super(name , age);
+                this.school = school;
+
+                console.log('Teacher Constructor');
+            }
+
+            add(element)
+            {
+                this.data.push(element);
+            }
+
+            show()
+            {
+                super.show();
+                console.log('School ',this.school);
+            }
+        }
+
+        let obj = new Teacher('Tra Long',26,'Turing Programming');
+        obj.show();
+        obj.add('one');
+
+        let obj2 = new Teacher('Tra Long',26,'Turing Programming');
+        obj2.show();
+        obj2.add('two');
+
+        console.log('Obj ',obj.data);
+        console.log('Obj2 ',obj2.data);
+
+    </script>
+</html>

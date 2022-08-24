@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    
+    <script>
+
+        console.log('true && true' , true && true);
+
+        // If LHS is falsy , return LHS value
+
+        function getTruthy(){
+            console.log('get true');
+            return true;
+        }
+
+        function getFalsy(){
+            console.log('get false');
+            return false;
+        }
+
+        console.log('getFalsy && getTruthy' , getFalsy() && getTruthy());
+
+        console.log('getFalsy && getTruthy' , null && getTruthy());
+
+        console.log('getFalsy && getTruthy' , undefined && getTruthy());
+
+        console.log('getFalsy && getTruthy' , 0 && getTruthy());
+
+        console.log('getFalsy && getTruthy' , '' && getTruthy());
+
+        console.log('getFalsy && getTruthy' , false && getTruthy());
+
+
+        //If LHS is truthy , return RHS value
+
+        console.log('hello && getTruthy' , 'hello' && getTruthy());
+
+        console.log('hello && how are you?' , 'hello' && 'how are you?');
+
+    </script>
+
+</body>
+</html>

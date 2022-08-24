@@ -1,0 +1,18 @@
+<html>
+    <script>
+
+        function rest(first,...arg){
+
+            console.log('First : ',first);
+            console.log('Arg : ',arg);
+        }
+
+        rest(10,20,30);
+        rest(10);
+
+        let arr = [10,30,40];
+
+        rest(...arr);
+
+    </script>
+</html>

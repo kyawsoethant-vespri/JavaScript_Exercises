@@ -1,0 +1,50 @@
+<html>
+    <script>
+
+        let nums = [10,20,30];
+
+        function display(values) {
+            console.log('Values : ',values);
+        }
+
+        nums.forEach(display);
+
+        function double(values){
+            return values*values;
+        }
+
+        let doubleNum = nums.map(double);
+        console.log('doubleNum : ',doubleNum);
+
+
+        let dreamyEyes = [
+            {
+                name : 'Tra Long',
+                age : 26,
+            },
+
+            {
+                name : 'Ha Lan',
+                age : 23,
+            },
+
+            {
+                name : 'Ryu Han Bi',
+                age : 16,
+            }
+        ];
+
+        let names = dreamyEyes.map(obj => obj.name);
+        console.log('Names : ',names);
+
+        let ages = dreamyEyes.map(obj => obj.age);
+        console.log('Ages : ',ages);
+
+        let adults = dreamyEyes.filter(obj => obj.age <= 20);
+        console.log('Adults : ',adults);
+
+        adults = dreamyEyes.filter(obj => obj.age >= 20);
+        console.log('Adults : ',adults);
+
+    </script>
+</html>

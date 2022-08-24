@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <script>
+
+        let obj = {
+            name : 'Tra Long',
+            age : 26,
+            Country : 'Vietnam'
+        };
+
+        let movie = 'Dreamy Eyes 2019';
+        let obj1 = {
+            name : obj.name,
+            age : obj.age,
+            Country : obj.Country,
+            movie
+        };
+
+        console.log('obj  ',obj);
+        console.log('obj1 ',obj1);
+
+        console.log('obj == obj1', obj == obj1);
+
+
+        obj['name_1'] = "Ha Lang";
+
+        let propName = 'name_1';
+
+        console.log('obj : ',obj[propName]);
+
+
+        let sym = Symbol('symbol');
+        let obj3 = {
+            [propName] : 3000,
+            [sym] : 'Symbol Data'
+        }
+
+        console.log('obj3 : ',obj3);
+
+    </script>
+</body>
+</html>

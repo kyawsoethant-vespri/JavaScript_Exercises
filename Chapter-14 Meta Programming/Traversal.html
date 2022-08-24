@@ -1,0 +1,34 @@
+<html>
+    <body>
+
+        <div id="container" color ="green">
+            <span>Hello</span>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+
+        <div>
+            Another Div
+        </div>
+
+        <a href="http://www.google.com" id="link"> Go to </a>
+
+    </body>
+
+    <script>
+
+        let container = document.getElementById('container');
+        console.log('Parent Node ',container.parentNode);
+        console.log('Child Node ',container.childNodes);
+        console.log('First Child ',container.firstChild);
+        console.log('Last Child ',container.lastChild);
+        console.log('Next Sibiling ',container.nextSibling);
+        console.log('Next Sibling Note ',container.nextElementSibling);
+
+        console.log('Attribute ',container.getAttribute('color'));
+
+        let link = document.getElementById('link');
+        console.log('Link ',link);
+        link.setAttribute('href','http://www.yahoo.com');
+
+    </script>
+</html>

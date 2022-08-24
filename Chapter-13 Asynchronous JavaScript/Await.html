@@ -1,0 +1,23 @@
+<html>
+    <script>
+
+        async function getTen()
+        {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    return resolve(10);
+                }, 3000);
+            });
+        }
+
+        async function getData()
+        {
+            let response = await getTen();
+            console.log('After await OK ',response);
+
+            return response;
+        }
+        getData().then(data => console.log('Data ',data));
+
+    </script>
+</html>

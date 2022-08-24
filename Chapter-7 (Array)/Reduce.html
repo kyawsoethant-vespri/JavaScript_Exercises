@@ -1,0 +1,21 @@
+<html>
+    <script>
+
+        let nums = [10,20,60,30,40,80];
+
+        function add(x,y) {
+            console.log('x ',x ,'y ',y);
+            return x + y;
+        }
+
+        let total = nums.reduce(add);
+        console.log('Total : ',total);
+
+        total = nums.reduceRight(add);
+        console.log('Total : ',total);
+
+        let max = nums.reduce((x,y) => x > y ? x : y);
+        console.log('Max : ',max);
+
+    </script>
+</html>

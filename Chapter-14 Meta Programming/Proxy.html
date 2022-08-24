@@ -1,0 +1,41 @@
+<html>
+    <script>
+        
+        let model = {
+            name : 'Tra Long',
+            age : 26,
+
+            display(){
+                console.log("Display Method")
+            }
+        }
+
+        let obj = new Proxy(model,{
+            get(o,name,target)
+            {   
+                // console.log("Obj ",o);
+                // console.log("Target ",target);
+
+                // console.log("Getter ",name);
+                if (typeof o[name] === "function") {
+                    console.log("Method ",name,"was called")
+                }
+                return o[name];
+            },
+
+            set(o,name,value,target)
+            {   
+                console.log("Setter ",name);
+                o[name] = value;
+            }
+        });
+
+        obj.name = 'test';
+        obj.name2 = 'test2'; 
+        obj.display();
+
+        console.log('Obj.name ',obj.name);
+        console.log('Obj.age ',obj.age);
+
+    </script>
+</html>

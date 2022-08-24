@@ -1,0 +1,44 @@
+<html>
+    <script src="https://cdn.jsdelivr.net/npm/ramda@0.25.0/dist/ramda.min.js"></script>
+
+    <script>
+        let objs = [
+            {
+                name : 'U Ngan',
+                gender : 'Male',
+                age : 29,
+            },
+
+            {
+                name : 'Tra Long',
+                gender : 'Female',
+                age : 26,
+            },
+
+            {
+                name : 'Ha Lang',
+                gender : 'Female',
+                age : 23,
+            },
+
+            {
+                name : 'Min Nya Nay',
+                gender : 'Male',
+                age : 25,
+            },
+        ]
+
+        let groupByGender = R.groupBy(obj => obj.gender);
+        let group = groupByGender(objs);
+        console.log('Group ',group);
+
+        let groupByName = R.groupBy(function(obj){
+            const gender = obj.gender;
+            return gender == 'Male' ? ('Mr.'+ obj.name): ('Mrs.'+obj.name);
+        });
+        
+        let groupName = groupByName(objs);
+        console.log('Group Name ',groupName);
+
+    </script>
+</html>

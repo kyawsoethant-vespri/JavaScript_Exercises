@@ -1,0 +1,37 @@
+<html>
+    <script>
+
+        function getData(callback)
+        {
+            console.log('Get data called');
+            
+            setTimeout(() => {
+                callback(100);
+            }, 2000);
+        }
+
+        function callback(data)
+        {
+            console.log('Callback',data);
+        }
+
+        getData(callback);
+
+
+        function getDataPromise()
+        {   
+            console.log('Get Data Promise');
+
+            return new Promise((resolve,reject) =>
+            {
+                setTimeout(() => {
+                return resolve(100);
+            }, 3000);
+            });
+            
+        }
+        getDataPromise().then(data => console.log('Data from Promise ',data));
+
+        
+    </script>
+</html>

@@ -1,0 +1,17 @@
+<html>
+    <script>
+
+        let pattern = /s+/i;
+        console.log('/s+/i ',pattern.test(''));
+        console.log('/s+/i hello ',pattern.test('hello'));
+
+        pattern = /\.+/i;
+        console.log('/\.+/i ...',pattern.test('....'));
+        console.log('/\.+/i hello ',pattern.test('hello'));
+
+        pattern = /((abc)|(xyz))+/i;
+        console.log('/((abc)| (xyz))+/i abcxyzabc',pattern.test('abcxyzabc'));
+        console.log('/((abc)| (xyz))+/i hello ',pattern.test('hello'));
+
+    </script>
+</html>

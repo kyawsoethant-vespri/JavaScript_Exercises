@@ -1,0 +1,26 @@
+<html>
+    <script>
+
+        function zip(leftArr,rightArr,fun)
+        {
+            let results = [];
+            let len = Math.min(leftArr.length,rightArr.length);
+
+            for(let i = 0;i < len;i++)
+            {
+                let result = fun(leftArr[i],rightArr[i]);
+                results.push(result);
+            }
+            return results;
+        }
+
+        let a = [1,2,3];
+        let b = ['U Ngan','Tra Long','Ha Lan'];
+
+        let pair = (a,b) => a + '=>' + b;
+
+        let results = zip(a,b,pair);
+
+        console.log('Results : ',results);
+    </script>
+</html>

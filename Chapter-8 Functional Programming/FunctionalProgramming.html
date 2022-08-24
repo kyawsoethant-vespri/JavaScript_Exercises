@@ -1,0 +1,73 @@
+<html>
+    <script>
+        let humans = [
+            {
+                name :  'U Ngan',
+                age : 29,
+                gender : 'Male'
+            },
+
+            {
+                name :  'Ha Lan',
+                age : 23,
+                gender : 'Female'
+            },
+
+            {
+                name :  'Tra Long',
+                age : 26,
+                gender : 'Female'
+            },
+
+            {
+                name :  'Min Nya Nay',
+                age : 26,
+                gender : 'Male'
+            },
+        ];
+
+        let result = [];
+
+        for(let human of humans)
+        {
+            if(human.age > 25)
+            {
+                let obj = Object.assign(human);
+
+                if(obj.gender == 'Male')
+                {
+                    obj.name = 'Mr.'+obj.name;
+                }
+
+                else
+                {
+                    obj.name = 'Mrs.'+obj.name;
+                }
+
+                result.push(obj);
+            }
+        
+        }
+
+        console.log('Result : ',result);
+
+
+        let adult = (human)=>human.age > 25;
+        let addPrefix = (human) => human.gender == 'Male' ? 
+                             {
+                                ...human,
+                                name : 'Mr.'+human.name
+                             } :
+
+                             {
+                                ...human,
+                                name : 'Mrs.'+human.name
+                             };
+
+
+        let fpResult = humans.filter(adult)
+                             .map(addPrefix);
+                console.log('FP Result : ',fpResult);
+
+    </script>
+</html>

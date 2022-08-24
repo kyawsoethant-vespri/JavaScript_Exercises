@@ -1,0 +1,36 @@
+<html>
+    <body id="container">
+        
+        <div class="header" name="color"> Div Header </div>
+        <span class="header" name="color"> Span Header </span>
+        <div> Another Div </div>
+
+    </body>
+
+    <script>
+
+        let names = document.getElementsByName('color');
+        console.log('Names ',names);
+
+        for(let i = 0; i < names.length; i++)
+        {
+            let node = document.createElement('div');
+            node.textContent = 'Div Node'+i;
+            document.getElementById('container').appendChild(node);
+        }
+
+        let tags = document.getElementsByTagName('div');
+        console.log('Tags ',tags);
+
+        for(let i = 0, len = tags.length; i < len; i++)
+        {
+            let node = document.createElement('div');
+            node.textContent = 'Div Node'+i;
+            document.getElementById('container').appendChild(node);
+        }
+
+        let classes = document.getElementsByClassName('header');
+        console.log('Classes ',classes);
+
+    </script>
+</html>

@@ -1,0 +1,38 @@
+<html>
+    <script>
+
+        let arr = [1,1,2,2,3,2,4,5,5,6];
+        let set = new Set(arr);
+
+        console.log('Set ',set);
+
+        let river = new Set('Hann Riiver');
+        console.log('River ',river);
+
+        let arrTwo = [1,2,3];
+
+        set.add(7);
+        set.add(12);
+        set.add(arrTwo);
+
+        set.delete(7);
+
+        
+        set.delete(arrTwo);
+        // set.clear();
+
+        console.log('Set Size ',set.size);
+        console.log('Has 1 ',set.has(1));
+
+        for (let element of set) 
+        {
+            console.log('Set Element ',element);
+        }
+
+        let arrThree = [...set];
+        console.log('Set Three ',arrThree);
+
+        set.forEach(i => console.log('I is ',i));
+
+    </script>
+</html>

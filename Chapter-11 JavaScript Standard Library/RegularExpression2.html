@@ -1,0 +1,31 @@
+<html>
+    <script>
+
+        let pattern = /[xyz]+/i;
+
+        console.log('/[xyz]+/i xxxyz ',pattern.test('xxxyz'));
+        console.log('/[xyz]+/i xhi ',pattern.test('xhi'));
+        console.log('/[xyz]+/i hello ',pattern.test('hello'));
+
+        pattern = /[a-c]+/i;
+        console.log('/[a-c]+/i  abc ',pattern.test('abc'));
+        console.log('/[a-c]+/i  def ',pattern.test('def'));
+
+        pattern = /([A-Z][a-z])+/i;
+        console.log('/([A-Z][a-z])+/i abc ',pattern.test('abc'));
+        console.log('/([A-Z][a-z])+/i def ',pattern.test('def'));
+
+        pattern = /\w+/i;
+        console.log('/\w+/i abc ',pattern.test('abc'));
+        console.log('/\w+/i def ',pattern.test('def'));
+        console.log('/\w+/i hello ',pattern.test('hello'));
+        console.log('/\w+/i 1223 ',pattern.test(1223));
+        console.log('/\w+/i "" ',pattern.test(''));
+        
+        pattern = /\d{8,11}/i;
+        console.log('/\d{8,11}/i 123456789 ',pattern.test(123456789));
+        console.log('/\d{8,11}/i "123456789" ',pattern.test('123456789'));
+        console.log('/\d{8,11}/i hello ',pattern.test('hello'));
+
+    </script>
+</html>

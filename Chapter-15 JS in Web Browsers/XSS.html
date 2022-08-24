@@ -1,0 +1,21 @@
+<html>
+
+    <textarea id="comment" cols="30" rows="10"></textarea>
+
+    <button id="btnAdd" type="button"> Add </button>
+
+    <div id="container"> </div>
+
+    <script>
+
+
+        document.getElementById("btnAdd").addEventListener("click",() => {
+            let divContainer = document.getElementById("container");
+            let commentText = document.getElementById('comment').value;
+            divContainer.innerHTML = commentText;
+
+            console.log("Done");
+        });
+
+    </script>
+</html>

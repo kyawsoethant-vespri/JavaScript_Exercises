@@ -1,0 +1,25 @@
+<html>
+    <script>
+
+        let obj ={
+            name : 'Tra Lang',
+
+            display(msg){
+                console.log('This : ',this);
+                console.log(msg,' ',this.name);
+            }
+        };
+
+        obj.display('Hello,');
+
+        let m = obj.display;
+        m.call(obj,'Hi');
+
+        let obj2 = {
+            name : 'Something else',
+        };
+
+        m.call(obj2,'Hello');
+
+    </script>
+</html>

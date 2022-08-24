@@ -1,0 +1,40 @@
+<html>
+    <script>
+
+        let objs = [
+            {
+                name : 'Tra Long',
+                age : 23,
+            },
+
+            {
+                name : 'Ngan',
+                age : 29,
+            },
+
+            {
+                name : 'Ha Lan',
+                age : 23,
+            }
+        ];
+
+        objs.sort((a,b) => a.age - b.age);
+        console.log('Sort Objs : ',objs);
+
+        objs.sort((a,b) => a.name.localeCompare(b.name));
+        console.log('Sort with names : ',objs);
+
+        function comparator(a,b){
+            if (a.age - b.age == 0){
+                return a.name.localeCompare(b.name);
+            }
+            else{
+                return a.age - b.age;
+            }
+        }
+
+        objs.sort(comparator);
+        console.log('Obj : ',objs);
+
+    </script>
+</html>

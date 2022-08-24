@@ -1,0 +1,27 @@
+<html>
+    <script>
+
+        function human(name , age){
+            
+            this.name = name;
+            this.age = age;
+
+            this.show = function()
+            {
+                console.log('Name: ',this.name , 'Age: ',this.age);
+            }
+        }
+
+        human.prototype.display = function()
+        {
+            console.log('Name: ',this.name , 'Age: ',this.age);
+        }
+
+        let obj = new human('Tra Long',26);
+        obj.display();
+        obj.show();
+
+        console.log('Obj instance of ',obj instanceof human);
+
+    </script>
+</html>

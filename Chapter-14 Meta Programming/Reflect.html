@@ -1,0 +1,25 @@
+<html>
+    <script>
+
+        function display(a,b) 
+        {
+            console.log('A ',a,'B ',b);
+        }
+
+        Reflect.apply(display,null,['One','Two']); //Reflect.apply(function,obj,arguments);
+
+        class Human
+        {
+            constructor(name)
+            {
+                console.log('Human Constructor name ',name);
+                this.name = name;
+            }
+        }
+
+        let obj = Reflect.construct(Human,['Tra Long']);
+        console.log('Obj ',obj);
+
+        console.log('Get ',Reflect.get(obj,'name'));
+    </script>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <script>
+
+        let obj ={
+            name : 'U Thant',
+            something : 'something'
+        };
+
+        console.log('Obj.age ', obj.age);
+        console.log('Obj.age.something ', obj?.age?.something);
+        console.log('Obj ', obj);
+
+        delete obj.something;
+        console.log('Delete obj ', obj);
+
+        console.log('IN (something) ', 'something' in obj);
+        console.log('IN (name) ', 'name' in obj);
+        console.log('IN to String ', 'toString' in obj);
+
+        console.log('hasOwnProperty(toString)', obj.hasOwnProperty('toString'));
+        console.log('hasOwnProperty(name)', obj.hasOwnProperty('name'));
+
+        console.log('toString obj.propertyIsEnumerable ',obj.propertyIsEnumerable('toString'));
+        console.log('name obj.propertyIsEnumerable ',obj.propertyIsEnumerable('name'));
+
+
+    </script>
+</body>
+</html>

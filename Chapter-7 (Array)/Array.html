@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    <script>
+
+        // Array Literals
+
+        let names = ['U Ngan','Ha Lang','Tra Lang'];
+        let ages = [29,23,26];
+
+        console.log('Names : ', names);
+        console.log('Ages :', ages);
+
+        console.log('Name of Length : ',names.length);
+        console.log('Names[0] : ',names[0]);
+
+        // Array Spread Operator
+
+        let a = [1,2,3];
+        let b = [...a,4,5];
+
+        console.log('Value of b : ',b);
+
+        let actor = ['U Ngan'];
+        let actress = [...actor,'Tra Lang','Ha Lang'];
+
+        console.log('Actor & Actress : ',actress);
+
+        // Array .of()
+
+        let c = [1,2,3];
+
+        c = Array.of(5,7,9);
+
+        console.log('C',c);
+
+        // Array .from
+
+        let d = Array.from(actress);
+        console.log('d :',d);
+
+    </script>
+</body>
+</html>

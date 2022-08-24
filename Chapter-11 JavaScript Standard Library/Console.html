@@ -1,0 +1,47 @@
+<html>
+    <script>
+
+        console.log('Log');
+        console.info('Info');
+        console.debug('Debug');
+        console.warn('Warn');
+        console.error('Error');
+
+        // function div(a,b)
+        // {
+        //     console.assert(arguments.length == 2, 'Invalid Parameter');
+        // }
+
+        // div(2);
+
+        // console.clear();
+
+        console.table(['Apples','Oranges','Banana']);
+
+        function one()
+        {
+            console.log('one');
+            two();
+        }
+
+        function two()
+        {
+            console.log('two');
+            console.trace();
+        }
+        one();
+
+        for(let i=0; i<10; i++)
+        {
+            console.count('Count Line');
+        }
+        console.countReset('Count Line');
+        console.count('Count Line');
+
+        
+        console.time('label1');
+        console.timeLog('label1','This is log');
+        console.timeEnd('label1');
+
+    </script>
+</html>
